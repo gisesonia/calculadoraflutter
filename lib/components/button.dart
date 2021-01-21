@@ -9,9 +9,11 @@ class Button extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return RaisedButton(
-      child: Text(text),
-      onPressed: () {},
+    return Expanded(
+      child: RaisedButton(
+        child: Text(text),
+        onPressed: () {},
+      ),
     );
   }
 }
