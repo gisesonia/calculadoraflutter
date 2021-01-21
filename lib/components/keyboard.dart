@@ -19,10 +19,12 @@ class Keyboard extends StatelessWidget {
           ButtonRow([
             Button.big(
               text: 'AC',
+              color: Button.DARK,
               callback: callback,
             ),
             Button(
               text: '%',
+              color: Button.DARK,
               callback: callback,
             ),
             Button.operation(
