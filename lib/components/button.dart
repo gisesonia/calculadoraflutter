@@ -23,7 +23,7 @@ class Button extends StatelessWidget {
 
   Button.operation({
     @required this.text,
-    this.big = true,
+    this.big = false,
     this.color = OPERATION,
   });
   @override
