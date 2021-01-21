@@ -7,6 +7,14 @@ class Memory {
   }
 
   void applyCommand(String command) {
-    _value += command;
+    if (command == 'AC') {
+      _allClear();
+    } else {
+      _value += command;
+    }
+  }
+
+  _allClear() {
+    _value = '0';
   }
 }
