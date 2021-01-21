@@ -1,6 +1,8 @@
 # calculator
 
-A new Flutter project.
+Projeto Calculadora.
+
+Projeto do canal coder do Youtube, criando uma calculadora
 
 ## Getting Started
 
