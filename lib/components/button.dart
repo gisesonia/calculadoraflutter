@@ -8,24 +8,27 @@ class Button extends StatelessWidget {
   final String text;
   final bool big;
   final Color color;
+  final void Function(String) callback;
 
   Button({
     @required this.text,
     this.big = false,
     this.color = DEFAULT,
+    @required this.callback,
   });
 
-  Button.big({
-    @required this.text,
-    this.big = true,
-    this.color = DEFAULT,
-  });
+  Button.big(
+      {@required this.text,
+      this.big = true,
+      this.color = DEFAULT,
+      @required this.callback});
 
-  Button.operation({
-    @required this.text,
-    this.big = false,
-    this.color = OPERATION,
-  });
+  Button.operation(
+      {@required this.text,
+      this.big = false,
+      this.color = OPERATION,
+      @required this.callback});
+
   @override
   Widget build(BuildContext context) {
     return Expanded(
@@ -37,7 +40,7 @@ class Button extends StatelessWidget {
           style: TextStyle(
               color: Colors.white, fontSize: 32, fontWeight: FontWeight.w200),
         ),
-        onPressed: () {},
+        onPressed: () => callback(text),
       ),
     );
   }
