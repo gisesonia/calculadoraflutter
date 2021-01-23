@@ -3,7 +3,7 @@ class Memory {
 
   final _buffer = [0.0, 0.0];
   int _bufferIndex = 0;
-  String operation;
+  String _operation;
   bool _wipeValue = false;
 
   //Atributo privado
@@ -20,6 +20,10 @@ class Memory {
   }
 
   _setOperation(String newOperation) {
+    if (_bufferIndex == 0) {
+      _operation = newOperation;
+      _bufferIndex = 1;
+    }
     _wipeValue = true;
   }
 
@@ -38,6 +42,7 @@ class Memory {
 
     _buffer[_bufferIndex] = double.tryParse(_value) ?? 0;
     print(_buffer[_bufferIndex]);
+    print(_buffer);
   }
 
   _allClear() {
